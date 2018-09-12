@@ -1,0 +1,1 @@
+INSERT INTO Products (name, price, imageUrl) VALUES ($1, $2, $3)
