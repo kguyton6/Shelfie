@@ -5,22 +5,22 @@ import Product from './Product'
 export default class Dashboard extends Component {
     constructor(props) {
         super(props)
-
-        this.state = {
-            newInventory: []
-
-        }
+        
+       this.state = {
+           products: []
+       }
     }
-
+    
 
         render() {
-            
-            
+           
 
             return ( 
 
             <div className='dashboard'>
-                <h2 inventory={console.log(this.props.inventory)}></h2>
+                <div>
+                    {this.props.inventory_list}
+                </div>
 
 
                <Product />

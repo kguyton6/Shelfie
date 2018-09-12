@@ -4,33 +4,29 @@ import './App.css';
 import Dashboard from './components/Dashboard'
 import Form from './components/Form'
 import Header from './components/Header'
+import axios from 'axios'
+
 
 class App extends Component {
   constructor(props){
     super(props)
 
     this.state = {
-      inventory: [ 
-        { name: 'hat',
-          price: '$8',
-          imgUrl: 'https://cdn.shopify.com/s/files/1/0636/4053/products/4_grande_bbbf9d3d-103e-4f0c-bdf4-48d51c209c7e_1800x.jpg?v=1495471940'
-          },
-        
-        { name: 'shirt',
-          price: '$10',
-          imageUrl: ''}
-        ]
+      inventory_list: []
     }
+
   }
-
-
-
-
+    
 
   render() {
+   this.state.inventory_list.map((items) => {
+      <li>{items}</li>
+      this.setState({inventory_list: items})
+    })
     return (
       <div className="App">
-      <Dashboard inventory={this.state.props}/>
+     
+      <Dashboard value={this.state.inventory_list}/>
       <Form />
       <Header />
 
