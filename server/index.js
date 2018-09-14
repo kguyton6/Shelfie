@@ -1,23 +1,22 @@
 require('dotenv').config()
 const express = require('express')
-const bodyParser = require('body-parser')
 const app = express()
+const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 const massive = require('massive')
-const ctrl = require('./module_controller')
-// const db = require('../db')
-
-// const baseUrl = `http://localhost:4800/api/shelfie`
+const ctrl = require('./shelfie_controller')
 
 
 
-massive(process.env.CONNECTION_STRING).then(db => { app.set('db', db)})
+
+
+massive(process.env.CONNECTION_STRING).then(dbInstance => { app.set('db', dbInstance)})
 .catch(err => console.log(err, 'Code Broke'))
 
 
 
-// app.post('/api/shelfie', ctrl.create)
-// app.get(`/api/shelfie`, ctrl.read)
+app.post(`/api/shelfie`, ctrl.add_inventory)
+app.get(`/api/shelfie`, ctrl.read_inventory)
 // app.delete('/api/shelfie/:id', ctrl.delete)
 
 
