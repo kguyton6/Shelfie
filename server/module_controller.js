@@ -3,9 +3,9 @@
 
 
 module.exports = {
-    // create: (req, res, next) => {
-    //     const dbInstance = req.app.get('db')
-        // const { name, price, imageUrl } = req.body
+    add_inventory: (req, res, next) => {
+        const dbInstance = req.app.get('db')
+        const { name, price, imageUrl } = req.body
 
         // dbInstance.add_inventory([name, price, imageUrl])
         //     .then(() => res.sendStatus(200))
