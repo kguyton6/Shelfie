@@ -10,10 +10,11 @@ export default class Form extends Component {
         this.state = {
             name: '',
             price: '',
-            imgUrl: 'http://dioceseofvaranasi.org.in/images/no_img.jpg',
+            image_url: 'http://dioceseofvaranasi.org.in/images/no_img.jpg',
 
             
         }
+        this.handleImage = this.handleImage.bind(this)
         this.handleName = this.handleName.bind(this)
         this.handlePrice = this.handlePrice.bind(this)
         this.resetInputs = this.resetInputs.bind(this)
@@ -36,7 +37,7 @@ export default class Form extends Component {
 
 
     handleImage(value) {
-        this.setState({ imgUrl: value })
+        this.setState({ image_url: value })
 
 
     }
@@ -47,7 +48,7 @@ export default class Form extends Component {
        axios.post(`/api/shelfie`, {
            name: this.state.name,
            price: this.state.price,
-           imgUrl: this.state.imgUrl
+           image_url: this.state.image_url
        } )
        .then(res => { console.log(res.body)
     }).catch(err => console.log(err, 'error'))
@@ -60,7 +61,7 @@ export default class Form extends Component {
         this.setState({
             name: '',
             price: '',
-            imgUrl: ''
+            image_url: ''
         })
         
     }
@@ -75,10 +76,13 @@ export default class Form extends Component {
             
                 <form className='form'>
                 <div className='wrapper'>
-                <img src={this.state.imgUrl} alt='product' height='220px' width='340px' border-style='solid' border-color='black'/><br/>
+              <picture className='url' object-fit='contain'>
+               <img src={this.state.image_url} alt='product' className='placeholder'/>
+               </picture>
+               <br/>
                 <div className='input-wrapper'>
                 Image Url:
-            <input onChange={(e) => this.handleImage(e.target.value)} />
+            <input onChange={(e) => this.handleImage(e.target.value)}  />
                 Name:
             <input onChange={(e) => this.handleName(e.target.value)} value={this.state.name} />
                 Price:

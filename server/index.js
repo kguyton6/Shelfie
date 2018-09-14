@@ -5,10 +5,11 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 const massive = require('massive')
 const ctrl = require('./shelfie_controller')
+const cors = require('cors')
 
 
 
-
+app.use(cors())
 
 massive(process.env.CONNECTION_STRING).then(dbInstance => { app.set('db', dbInstance)})
 .catch(err => console.log(err, 'Code Broke'))

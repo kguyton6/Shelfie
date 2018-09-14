@@ -15,24 +15,27 @@ class App extends Component {
     this.state = {
       inventory_list: []
     }
+    this.componentDidMount = this.componentDidMount.bind(this)
 
   }
     
   componentDidMount(){
     axios.get(`http://localhost:4800/api/shelfie`)
-    .then((res) => { 
-      this.setState({inventory_list: res.products})
+    .then((res) =>  { 
+      this.setState({inventory_list: res.data})
     }).catch(err => console.log(err, 'kims error'))
   }
 
 
 
   render() {
-   
+   let products =this.state.inventory_list.map((product) => {
+     return <li>{product}</li>
+   })
     return (
       <div className="App">
      
-      <Dashboard />
+      <Dashboard inventory={this.state.inventory_list} value={products}/>
       <Form />
       <Header />
 

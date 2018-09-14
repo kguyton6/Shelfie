@@ -3,9 +3,9 @@
 module.exports = {
     add_inventory: (req, res, next) => {
         const dbInstance = req.app.get('db')
-        const { name, price, imageUrl } = req.body
+        const { name, price, image_url } = req.body
 
-        dbInstance.add_inventory([name, price, imageUrl])
+        dbInstance.add_inventory([name, price, image_url])
             .then(() => res.sendStatus(200))
             .catch(err => { res.status(500)
             .send({ errorMessage: "Ooops, Not Today"})
@@ -17,7 +17,7 @@ module.exports = {
         const dbInstance = req.app.get('db')
 
         dbInstance.read_inventory()
-        .then(products => res.status(200).send(products))
+        .then(Products => res.status(200).send(Products))
         .catch(err => {
             res.status(500).send({errorMessage: 'Not Working'})
             console.log(err)

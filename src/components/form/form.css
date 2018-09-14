@@ -68,7 +68,15 @@ img{
     padding: 30px 30px 30px 30px;
 }
 
+.placeholder {
+    height: 220px;
+    width: 340px;
+}
 
+.url {
+    object-fit: contain;
+   
+}
 
 
 
