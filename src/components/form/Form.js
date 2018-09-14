@@ -10,7 +10,7 @@ export default class Form extends Component {
         this.state = {
             name: '',
             price: '',
-            imgUrl: 'http://thednetworks.com/wp-content/uploads/2012/01/picture_not_available_400-300.png',
+            imgUrl: 'http://dioceseofvaranasi.org.in/images/no_img.jpg',
 
             
         }
@@ -60,7 +60,7 @@ export default class Form extends Component {
         this.setState({
             name: '',
             price: '',
-            imgUrl: 'http://thednetworks.com/wp-content/uploads/2012/01/picture_not_available_400-300.png'
+            imgUrl: ''
         })
         
     }
@@ -75,19 +75,21 @@ export default class Form extends Component {
             
                 <form className='form'>
                 <div className='wrapper'>
-                <img src={this.state.imgUrl} alt='product' height='200px' width='300px' /><br/>
+                <img src={this.state.imgUrl} alt='product' height='220px' width='340px' border-style='solid' border-color='black'/><br/>
                 <div className='input-wrapper'>
                 Image Url:
-            <input onChange={(e) => this.handleImage(e.target.value)} /><br/>
+            <input onChange={(e) => this.handleImage(e.target.value)} />
                 Name:
-            <input onChange={(e) => this.handleName(e.target.value)} value={this.state.name} /><br/>
+            <input onChange={(e) => this.handleName(e.target.value)} value={this.state.name} />
                 Price:
-            <input onChange={(e) => this.handlePrice(e.target.value)} value={this.state.price} /><br/>
+            <input onChange={(e) => this.handlePrice(e.target.value)} value={this.state.price} />
+            
+                <div className='buttons'>
                 <button className='cancel'onClick={() => this.resetInputs()}>Cancel</button>
                 <button className='add'onClick={() => this.handleAddInventory()}>Add Inventory</button>
                 </div>
                 </div>
-            
+                </div>
             </form>
             
       

@@ -3,55 +3,72 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    bottom:  0px;
+
 }
 
 .input-wrapper {
     align-items: center;
+    line-height: 40px;
+    position: absolute;
+    top: 250px;
 }
 
 .form {
     position: absolute;
-    width: 415px;
-    height: 500px;
+    width: 450px;
+    height: 550px;
     right: 100px;
     top: 200px;
     background-color: #00E182;
     border-radius: 5px;
-    
+    font-family: Open Sans;
 
     
 
 }
-
-
-
 input {
-display: flex;
-     width: 300px;
-    height: 15px;
-
+    display: flex;
+    width: 420px;
+    height: 19px;
+    margin-top: 0px;
 
 
 }
 
 
 .cancel {
-    width: 50px;
-    height: 30px;
+    width: 70px;
+    height: 40px;
     border-radius: 5px;
-    background-color: #FD5F4B;
+    background-color: rgb(248, 114, 96);
+    font-size: 16px;
+
 }
 
 .add {
-    position: absolute;
-    width: 100px;
-    height: 30px;
+    width: 145px;
+    height: 45px;
     border-radius: 5px;
-    background-color: #FD5F4B;
-    right: 50px;
+    background-color: rgb(248, 114, 96);
+    font-size: 16px;
+    
 }
+
+
+.buttons {
+    margin-top: 25px;
+    width: 426px;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 img{
     padding: 30px 30px 30px 30px;
-
 }
+
+
+
+
+
