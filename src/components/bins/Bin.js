@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Product from './Product'
 
 
-export default class Dashboard extends Component {
+
+export default class Bin extends Component {
     constructor(props) {
         super(props)
 
@@ -16,13 +16,13 @@ export default class Dashboard extends Component {
 
             return ( 
 
-            <div className='dashboard'>
+            <div>
                 
                  
             
 
 
-               <Product  />
+
              </div>
         )
     }

@@ -1,13 +1,44 @@
 .App {
+  height: 100vh;
+}
 
 
  
 
-}
+
 
 header {
   background-color: #B81000;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: white;
-  font-size: 30px;
+  font-size: 45px;
+  text-indent: 20px;
+  height: 100px;
+}
+
+.shelf {
+  display: flex;
+  flex-wrap: wrap;
+  height: inherit;
+  width: inherit;
+  flex-direction: column;
+   text-align: left;
+}
+
+
+button {
+  padding: 30px 250px 30px 250px;
+  border-radius: 10px;
+  background-color: #E23519;
+  color: white;
+  margin-top: 30px;
+  font-size: 40px;
+ 
+}
+
+
+.links {
+  display: flex;
+  justify-content: space-around;
+
 }
