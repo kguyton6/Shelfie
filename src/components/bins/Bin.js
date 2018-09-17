@@ -11,19 +11,19 @@ export default class Bin extends Component {
         }
 
     }
-        render() {
+    render() {
 
 
-            return ( 
+        return (
 
-            <div>
-                
-                 
-            
-
-
-
-             </div>
+            <div className='bin'>
+              Name  <input />
+              Price  <input />
+            <div className='binButton'>
+                <button>Edit</button>
+                <button>Delete</button>
+           </div>
+           </div>
         )
     }
 }
