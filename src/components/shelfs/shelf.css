@@ -1,0 +1,46 @@
+.shelf-header {
+    background-color: #B81000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 45px;
+    height: 100px;
+    width: 100vw;
+    text-align: center;
+    
+   
+}
+
+.shelf-logo {
+    position: absolute;
+    background-color: rgb(155, 31, 31);
+    width: 30vw;
+    height: 100px;
+   left: 0px;
+   top: 0px;
+}
+
+#img {
+    padding: 20px;
+}
+
+.shelf-button-bin {
+    background-color: #FD5F4B;
+    border-radius: 10px;
+    color: white;
+    margin-top: 30px;
+    font-size: 40px;
+ 
+
+}
+
+.shelf-add-button {
+    background-color: #ffb8af;
+    border-radius: 10px;
+    color: black;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+
+
+

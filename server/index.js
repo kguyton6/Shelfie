@@ -16,13 +16,15 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => { app.set('db', dbInst
 
 
 
-// app.post(`/api/shelfie`, ctrl.add_inventory)
-app.get(`/shelf/:id`, ctrl.read_inventory)
-app.get(`/shelf/`)
-app.post(`/shelf/:id`)
+
+// app.get(`/home`, ctrl.read_inventory)
+// app.get(`/shelf/:id`, ctrl.read_inventory)
+app.get('/shelf/:id', ctrl.read_inventory)
+// app.get(`/bin/:id`, ctrl.get_one)
+app.post(`/bin/:id`, ctrl.add_inventory)
 
 
-// app.delete('/api/shelfie/:id', ctrl.delete)
+
 
 
 
