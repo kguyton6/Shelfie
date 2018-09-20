@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 
 export default class Bin extends Component {
@@ -13,7 +13,7 @@ export default class Bin extends Component {
         this.componentDidMount = this.componentDidMount.bind(this)
     }
     componentDidMount(){
-        axios.get(`http://localhost:4800/shelf/$shelf=${this.props.match.params.shelf}bin?bin=${this.props.match.params.bin}`).then(res => { 
+        axios.get(`http://localhost:4800/shelf/${this.props.match.params.id.id}`).then(res => { 
             this.setState({ bins: res.data })
             console.log(res.data)
         }).catch(err => console.log(err, 'error'))

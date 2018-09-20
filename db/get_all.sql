@@ -1,1 +1,2 @@
 SELECT * FROM Products 
+WHERE SHELF=$1 

@@ -17,12 +17,10 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => { app.set('db', dbInst
 
 
 
-// app.get(`/home`, ctrl.read_inventory)
-// app.get(`/shelf/:id`, ctrl.read_inventory)
-app.get('/shelf/:id', ctrl.read_inventory)
-// app.get(`/bin/:id`, ctrl.get_one)
-app.post(`/bin/:id`, ctrl.add_inventory)
-
+app.get(`/shelf/:id`, ctrl.get_all)
+// app.get('/shelf/:id/bin/:id', ctrl.get_shelf_bins)
+// app.post(`/shelf/:id/bin/:id`, ctrl.post_create)
+// app.put('/shelf/:id/bin/:id', ctrl.put_shelfs)
 
 
 

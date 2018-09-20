@@ -2,13 +2,13 @@
 
     background-color: #B81000;
     height: 100px;
-    font-family: Arial, Helvetica, sans-serif;
+
     color: white;
     font-size: 45px;
     text-indent: 100px;
 
   }
-
+  
   
   .shelf {
     display: flex;
