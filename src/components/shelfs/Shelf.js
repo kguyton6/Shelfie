@@ -1,9 +1,10 @@
+
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import '../shelfs/shelf.css'
 import logo from '../../components/shelfie.png'
-// import Create_Bin from '../bins/Create_Bin'
+// import add_Bin from '../bins/add_Bin'
 
 
 class Shelf extends Component { 
@@ -11,47 +12,85 @@ class Shelf extends Component {
         super(props)
 
         this.state = {
-            bins: {},
-            products: []
+            products: [],
+                   
+                }
 
-        }
-        // this.componentDidMount = this.componentDidMount.bind(this)
+
+        this.componentDidMount = this.componentDidMount.bind(this)
+
     }
+       
+    
+
+
+
+
         
         componentDidMount(){
-            axios.get(`http://localhost:4800/shelf/${this.props.match.params.id}`)
+            axios.get(`api/shelf/${this.props.match.params.id}`)
            .then(res => { 
-                this.setState({ products: res.data })
+               this.setState({ products: res.data})
+            
             }).catch(err => console.log(err, 'error'))
+
         }
 
-
-
-
-    render( ) {
         
-    // let { bins } = this.state.products
-    //     for(let i = 0; i < bins.length; i++){
-    //         if (bins[i] === id) {
-    //             this.setState({ bins: bins })
-    //     }       return (<Link to='shelf/shelf=A/bin=1' value={bins[i]}><button className='shelf-button-bin' ></button></Link>)
-    // }
+
+
+    render() {
+            console.log(this.state.products)
+        
+     
       return (
+          
             <div className='shelf-container'>
 
-            <div className='shelf-header' > Shelf 
+            <div className='shelf-header'>
+            {`Shelf ${this.props.match.params.id }`} 
            
-            <Link to='/Home' className='shelf-logo'><img id='img' src={logo} /></Link>
+            <Link to='/home' className='shelf-logo'><img id='img' src={logo} /></Link>
             </div>
-           
-                    <div className='bin-list'>
-                        <Link to='/bin/bin=1'><button className='shelf-button-bin'>Bin 1 </button></Link>
-                        <Link to='/bin/bin=2'><button className='shelf-button-bin'>Bin 2</button></Link>
-                        <Link to='/bin/bin=3'><button className='shelf-button-bin'>Bin 3</button></Link>
-                        <Link to='/bin/bin=4'><button className='shelf-button-bin'>Bin 4</button></Link>
-                        <Link to='/bin/bin=5'><button className='shelf-add-button' >
-                        + Add to Inventory</button></Link> 
+
+                    
+                    {this.state.products.length ?
+                         <div className='bin-list'> 
+                    {this.state.products[0].name ?   
+                        <Link to={`/shelf/${this.props.match.params.id}/bin/1`}>
+                        <button className='shelf-button-bin'> Bin 1</button></Link>
+                       : <Link to={`/shelf/${this.props.match.params.id}/add/1`}><button className='shelf-add-button' >
+                    + Add to Inventory</button></Link> }
+                                               
+
+                      {this.state.products[1].name ?   
+                        <Link to={`/shelf/${this.props.match.params.id}/bin/2`}>
+                        <button className='shelf-button-bin'>Bin 2</button></Link>:
+                        <Link to={`/shelf/${this.props.match.params.id}/add/2`}><button className='shelf-add-button' >
+                    + Add to Inventory</button></Link> }
+
+
+                      {this.state.products[2].name ?   
+                        <Link to={`/shelf/${this.props.match.params.id}/bin/3`}>
+                        <button className='shelf-button-bin'>Bin 3</button></Link>:
+                        <Link to={`/shelf/${this.props.match.params.id}/add/3`}><button className='shelf-add-button' >
+                    + Add to Inventory</button></Link> }
+
+
+                      {this.state.products[3].name ?   
+                        <Link to={`/shelf/${this.props.match.params.id}/bin/4`}>
+                        <button className='shelf-button-bin'>Bin 4</button></Link>:
+                        <Link to={`/shelf/${this.props.match.params.id}/add/4`}><button className='shelf-add-button' >
+                    + Add to Inventory</button></Link> }
+
+
+                      {this.state.products[4].name ?   
+                        <Link to={`/shelf/${this.props.match.params.id}/bin/5`}>
+                        <button className='shelf-button-bin'>Bin 5</button></Link>:
+                        <Link to={`/shelf/${this.props.match.params.id}/add/5`}><button className='shelf-add-button' >
+                    + Add to Inventory</button></Link> }
                 </div>
+                    : null   } 
             </div>
         )
     }

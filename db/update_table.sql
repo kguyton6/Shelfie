@@ -5,5 +5,4 @@ SET
   price = $4,
   image_url = $5
 WHERE
-  shelf = $1 
-  AND bin = $2
+ shelf=$1 and bin = $2

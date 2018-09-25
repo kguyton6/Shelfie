@@ -11,17 +11,18 @@ function Home () {
 
     return (
         <div className='App'>
-            <header>
+            <div className='home-header'>
               
               <img src={logo} alt='logo' />
            <span className='text'>SHELFIE</span> 
              
-                </header>
+                </div>
+                <br/>
             <div className='shelf'>
                 <Link to='/shelf/A' ><button className='shelf-button'>Shelf A</button></Link>
                 <Link to='/shelf/B' ><button className='shelf-button'>Shelf B</button></Link>
-                <Link to='/shelf/shelf=C' ><button className='shelf-button'>Shelf C</button></Link>
-                <Link to='/shelf/shelf=D' ><button className='shelf-button'>Shelf D</button></Link>
+                <Link to='/shelf/C' ><button className='shelf-button'>Shelf C</button></Link>
+                <Link to='/shelf/D' ><button className='shelf-button'>Shelf D</button></Link>
             </div>
 
 

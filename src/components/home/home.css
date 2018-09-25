@@ -1,13 +1,13 @@
-    header {
-
-    background-color: #B81000;
-    height: 100px;
-
-    color: white;
-    font-size: 45px;
-    text-indent: 100px;
-
-  }
+.home-header {
+  background-color: #B81000;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 45px;
+  height: 100px;
+  width: 100vw;
+  text-align: center;
+  
+}
   
   
   .shelf {
