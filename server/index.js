@@ -19,7 +19,7 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => { app.set('db', dbInst
 
 app.get(`/api/shelf/:id`, ctrl.get_all)
 app.get('/api/shelf/:id/bin/:bin', ctrl.get_shelf_bins)
-// app.post(`/shelf/:id/bin/:id`, ctrl.post_create)
+app.delete('/api/shelf/:id/bin/:bin', ctrl.delete)
 app.put('/api/shelf/:id/bin/:bin',  ctrl.update_table)
 
 

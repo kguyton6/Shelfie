@@ -40,18 +40,13 @@ module.exports = {
 
 
 
-
-    // post_create: (req, res, next) => {
-    //     const dbInstance = req.app.get('db')
-    //     const { shelf, bin, name, price, image_url } = req.body
-
-    //     dbInstance.post_create([shelf, bin, name, price, image_url])
-    //         .then(() => res.sendStatus(200)).send('cool')
-    //         .catch(err => { res.status(500)
-    //         .send({ errorMessage: 'post not working Kim'})
-    //             console.log(err)
-    //         })
-    // },
+        delete: (req, res, next ) => {
+            const dbInstance = req.app.get('db')
+            const { name, price, image_url } = req.body
+            
+            dbInstance.delete(req.params.id, req.params.bin, name, price, image_url)
+            .then(() => res.status(200).send(alert('deleted')))
+        }
 
 
 
