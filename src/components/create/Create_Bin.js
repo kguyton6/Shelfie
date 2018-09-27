@@ -3,7 +3,7 @@ import axios from 'axios'
 import logo from './shelfie.png'
 import no_image from './no_image.png'
 import { Link, Route } from 'react-router-dom'
-import './bin.css'
+import './create.css'
 
 export default class Create_Bin extends Component {
     constructor(props) {
@@ -21,11 +21,11 @@ export default class Create_Bin extends Component {
         this.handleImage = this.handleImage.bind(this)
 
     }
-    
+
 
     addInventory(name, price, image_url) {
         axios.put(`/api/shelf/${this.props.match.params.id}/bin/${this.props.match.params.bin}`, { name, price, image_url })
-          .then(() => this.props.history.push(`/shelf/${this.props.match.params.id}/bin/${this.props.match.params.bin}`))
+            .then(() => this.props.history.push(`/shelf/${this.props.match.params.id}/bin/${this.props.match.params.bin}`))
 
             .catch(err => console.log(err, 'error'))
 
@@ -33,7 +33,7 @@ export default class Create_Bin extends Component {
 
     handleName(value) {
         this.setState({ name: value })
-        return <h1>{this.state.name}</h1>
+
 
     }
 
@@ -53,36 +53,39 @@ export default class Create_Bin extends Component {
     render() {
 
         return (
-            <div className='bin-container'>
-                <div className='bin-header'>
-                    <Link to='/home' className='link'> <img className='logo3' src={logo} /></Link>
+            <div className='create-container'>
+                <div className='create-header'>
+                    <Link to='/home' className='link'> <img className='create-logo' src={logo} /></Link>
                     <Link to={`/shelf/${this.props.match.params.id}`} className='shelf-title'>
                         {`Shelf ${this.props.match.params.id}`} </Link>
-                    <div className='bin-title1'>{`Add to Bin ${this.props.match.params.bin}`} </div>
+                    <div className='create-title'>{`Add to Bin ${this.props.match.params.bin}`} </div>
                 </div>
 
-            <main className='container-1'>
-            <div className='create'>
-                
-                {this.state.disabled === true ? 
-              
-                <h1>{this.state.name}</h1>
-                :<input placeholder='     Product Name'onChange={(e) => this.handleName(e.target.value)} />}
-        
-              <input onChange={(e) => this.handlePrice(e.target.value)} placeholder='$0.00' />
-      
-                <input placeholder='image url' onChange={(e) => this.handleImage(e.target.value)} /> </div>
-    <br/><br/>
-                        <img className='url' src={this.state.image_url} />
-                        <br/>
-                <div className='add_inventory'>
-                 <button className='add' onClick={() => this.addInventory(this.state.name, this.state.price, this.state.image_url)}>
-                    + Add Inventory</button>
+                <main className='container-1'>
+                    <div className='create-inputs'>
 
+
+
+
+ <input placeholder='Title Your Image' onChange={(e) => this.handleName(e.target.value)} />
+                       <span className='dollar-sign'>$</span>
+                        <input className='dollar-input'     type="number" name="HPR" min="0" step="0.01" required onChange={(e) => this.handlePrice(e.target.value)} placeholder='0.00' />
+
+
+                        <input placeholder='image url' onChange={(e) => this.handleImage(e.target.value)} />
+                        <br /><br />
+                        <button className='add' onClick={() => this.addInventory(this.state.name, this.state.price, this.state.image_url)}>
+                            + Add Inventory</button>
                     </div>
-                   
+                    <div className='create-container2'>
+                        <img className='url' src={this.state.image_url} />
+                        <br />
+                        <div className='add_inventory'>
 
-            </main>
+                        </div>
+                    </div>
+
+                </main>
             </div>
         )
     }
