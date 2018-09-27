@@ -47,10 +47,9 @@ class Shelf extends Component {
             <div className='shelf'>
                 <div className='shelf-header'>
                     <Link to='/home' className='shelf-logo'><img className='logo1' src={logo} /></Link>
+                 <span className='shelf-title'>{`Shelf ${this.props.match.params.id}`}</span>
 
-                    {`Shelf ${this.props.match.params.id}`}
-
-                </div><br /><br /><br /><br />
+                </div>
                 <div className='shelf-container'>
 
 

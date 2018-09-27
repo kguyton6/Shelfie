@@ -59,7 +59,7 @@ export default class Create_Bin extends Component {
                     <Link to={`/shelf/${this.props.match.params.id}`} className='shelf-title'>
                         {`Shelf ${this.props.match.params.id}`} </Link>
                     <div className='bin-title1'>{`Add to Bin ${this.props.match.params.bin}`} </div>
-                </div><br />
+                </div>
 
             <main className='container-1'>
             <div className='create'>

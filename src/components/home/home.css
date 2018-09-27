@@ -4,13 +4,14 @@
   width: 100vw;
   color: white;
   font-size: 45px;
-  text-indent: 25vw; 
-  line-height: 2.5em;
+  text-indent: 30vw; 
+
 }
   img.logo {
     width: 70px;
     height: 70px; 
-    margin-left: 17vw;
+    margin-right: 20px;
+    margin-top: 20px;
   }
   
   .shelf {

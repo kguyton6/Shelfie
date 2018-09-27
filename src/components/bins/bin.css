@@ -1,6 +1,5 @@
 div.bin-container {
     display: flex;
-    justify-content: center;
     width: 100vw;
     flex-direction: column;
 }
@@ -9,13 +8,15 @@ div.create {
     font-size: 20px;
 
 }
-
+.bin-header {
+    display: flex;
+    flex-direction: row;
+}
 a.shelf-title {
-    position: fixed;
     color: white;
     height:108px;
     width: 20vw;
-    left: 200px;
+    left: 150px;
     text-decoration: none;
    background-color: #E23519;
    font-weight: bold;
@@ -28,20 +29,18 @@ a.shelf-title {
 }
 
 img.logo3 {
-    position: fixed;
-    left: 65px;
+    position: relative;
     top: 20px;
     width: 70px;
     height: 70px; 
 
 }
 .bin-title1 {
-    position: fixed;
     font-weight: bold;
     right: 0px;
     width: 70vw;
     height: 108px;
-    background-color: #FD5F4B;
+    background-color: #FFB4AA;
     font-weight: bold;
     font-size: 50px;
     text-align: left;
@@ -51,7 +50,6 @@ img.logo3 {
 }
 
 a.link {
-    position: fixed;
     left: 0px;
     top: 0px;
     background-color: #B81000;
@@ -59,7 +57,6 @@ a.link {
     height: 108px;
 }
 .bin-title {
-    position: fixed;
     font-weight: bold;
     color: white;
     right: 0px;
@@ -76,11 +73,12 @@ a.link {
 div.main-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+
 }
+
 div.container1 {
     display: flex;
-    margin-top: 130px;
     width: 100vw;
     flex-direction: column;
     align-items: center;
@@ -90,7 +88,7 @@ div.container1 {
 
 main.container-1 {
     display: flex;
-    margin-top: 130px;
+    margin-top: 50px;
     width: 100vw;
     flex-direction: column;
     align-items: center;
@@ -123,7 +121,9 @@ img.url {
     min-width: 300px;
     min-height: 400px;
 }
-
+.inputs {
+    margin-top: 30px;
+}
 
 
 input {
@@ -181,7 +181,7 @@ button.edit, button.delete {
 
 .buttons {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     color: black;
     justify-content: space-between;
     width: 400px;

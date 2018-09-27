@@ -70,14 +70,15 @@ export default class Bin extends Component {
         alert('this is permanent')
         this.setState({ name: '', price: '', image_url: '' })
         axios.put(`/api/shelf/${this.props.match.params.id}/bin/${this.props.match.params.bin}`, this.state.name, this.state.price, this.state.image_url)
-            .then(() => { this.setState({ disabled: false, image_url: no_image })
+            .then(() => {
+                this.setState({ disabled: false, image_url: no_image })
 
             })
 
     }
 
-    handleCancel(){
-       this.props.history.push(`/shelf/${this.props.match.params.id}`)
+    handleCancel() {
+        this.props.history.push(`/shelf/${this.props.match.params.id}`)
     }
 
     render() {
@@ -89,7 +90,7 @@ export default class Bin extends Component {
                     <Link to={`/shelf/${this.props.match.params.id}`} className='shelf-title'>
                         {`Shelf ${this.props.match.params.id}`} </Link>
                     <div className='bin-title'>{`Bin ${this.props.match.params.bin}`} </div>
-                </div><br />
+                </div>
 
 
                 <main className='main-container'>
@@ -97,12 +98,12 @@ export default class Bin extends Component {
                         <div className='container1'>
                             <div className='heading'>
                                 <h3 className='title'>{this.state.name}</h3>
-                            <div className='photo'>
-                            <img src={this.state.image_url} alt='product' className='url' />
-                                <div className='price'> 
-                            </div>
-                     {`Price:  ${this.state.price}`}</div>
-                               <br/>
+                                <div className='photo'>
+                                    <img src={this.state.image_url} alt='product' className='url' />
+                                    <div className='price'>
+                                    </div>
+                                    {`Price:  ${this.state.price}`}</div>
+                                <br />
                             </div>
                             <div className='buttons'>
                                 <button className='edit' onClick={() => this.handleEdit()}>
@@ -113,24 +114,24 @@ export default class Bin extends Component {
                         </div> :
 
                         <div className='container1'>
-                          
-                            <input placeholder='Product Name' className='product-name'
-                                value={this.state.name}
-                                onChange={(e) => this.handleName(e.target.value)} />
-                            <input disabled={this.state.disabled}
-                                value={this.state.price}
-                                placeholder='$0.00' 
-                                onChange={(e) => this.handlePrice(e.target.value)} />
-                         
-                         <input placeholder='image url' onChange={(e) => this.handleImage(e.target.value)}
-                            />
+                            <div className='inputs'>
+                                <input placeholder='Product Name' className='product-name'
+                                    value={this.state.name}
+                                    onChange={(e) => this.handleName(e.target.value)} />
+                                <input disabled={this.state.disabled}
+                                    value={this.state.price}
+                                    placeholder='$0.00'
+                                    onChange={(e) => this.handlePrice(e.target.value)} />
 
-                            <img src={this.state.image_url } alt='product' className='url' />
+                                <input placeholder='image url' onChange={(e) => this.handleImage(e.target.value)}
+                                />
+                            </div>
+                            <img src={this.state.image_url} alt='product' className='url' />
 
                             <div className='buttons'>
                                 <button className='save' onClick={() => this.handleSave(this.state.name, this.state.price, this.state.image_url)}>
                                     Save</button>
-                                    <button className='delete' onClick={() => this.handleCancel()}>
+                                <button className='delete' onClick={() => this.handleCancel()}>
                                     Cancel</button>
                             </div>
                         </div>

@@ -1,33 +1,28 @@
-.shelf-container {
+
+
+div.shelf-container {
     display: flex;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    
 }
 
-
-.shelf-header {
-    position: fixed;
+div.shelf-header {
+    display: flex;
+    justify-content: end;
     background-color: #B81000;
     color: white;
     height: 110px;
-    width: 70vw;
+    width: 100vw;
     font-size: 50px;
-    text-indent: 15px;
     line-height: 2em;
     font-weight: bold;
-    right: 0px;
+    text-indent: 1em;
   
 }
 
 a.shelf-logo {
-    position: fixed;
     background-color: rgb(155, 31, 31);
-    width: 30vw;
+    width: 25vw;
     height: 110px;
-   left: 0px;
-   top: 0px;
    justify-content: center;
    align-items: center;
 }
@@ -37,9 +32,6 @@ img.logo1 {
     height: 70px; 
   
 
-}
-.bin-list {
-    margin-top: 100px;
 }
 
 button.shelf-button-bin {
