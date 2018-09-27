@@ -7,22 +7,24 @@ import './home.css'
 import logo from './shelfie.png'
 
 
-function Home () {
+function Home() {
 
     return (
-        <div className='App'>
+        <div className='home'>
             <div className='home-header'>
-              
-              <img src={logo} alt='logo' />
-           <span className='text'>SHELFIE</span> 
-             
-                </div>
-                <br/>
+                    <img src={logo} alt='logo' className='logo'  />
+              SHELFIE   
+
+
+            </div><br/>
+
+
+
             <div className='shelf'>
-                <Link to='/shelf/A' ><button className='shelf-button'>Shelf A</button></Link>
-                <Link to='/shelf/B' ><button className='shelf-button'>Shelf B</button></Link>
-                <Link to='/shelf/C' ><button className='shelf-button'>Shelf C</button></Link>
-                <Link to='/shelf/D' ><button className='shelf-button'>Shelf D</button></Link>
+                <Link to='/shelf/A' ><button className='shelf-button'>Hats</button></Link>
+                <Link to='/shelf/B' ><button className='shelf-button'>Shirts</button></Link>
+                <Link to='/shelf/C' ><button className='shelf-button'>Water Bottles</button></Link>
+                <Link to='/shelf/D' ><button className='shelf-button'>Socks</button></Link>
             </div>
 
 
@@ -30,7 +32,7 @@ function Home () {
 
     )
 
-} 
+}
 
 
 

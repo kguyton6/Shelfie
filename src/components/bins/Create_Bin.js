@@ -53,32 +53,36 @@ export default class Create_Bin extends Component {
     render() {
 
         return (
-            <div className='create'>
+            <div className='bin-container'>
                 <div className='bin-header'>
-                    <Link to={`/shelf/${this.props.match.params.id}`} className='bin-logo'><img id='img' src={logo} /></Link>
-                    <span> {`Shelf ${this.props.match.params.id}`} </span><b/>
-                    <span>{`Add to Bin ${this.props.match.params.bin}`} </span>
-                </div>
-                <br />
+                    <Link to='/home' className='link'> <img className='logo3' src={logo} /></Link>
+                    <Link to={`/shelf/${this.props.match.params.id}`} className='shelf-title'>
+                        {`Shelf ${this.props.match.params.id}`} </Link>
+                    <div className='bin-title1'>{`Add to Bin ${this.props.match.params.bin}`} </div>
+                </div><br />
 
-                Product Name 
+            <main className='container-1'>
+            <div className='create'>
+                
                 {this.state.disabled === true ? 
+              
                 <h1>{this.state.name}</h1>
-                :<input onChange={(e) => this.handleName(e.target.value)} />}
-                Price <input onChange={(e) => this.handlePrice(e.target.value)} placeholder='$0.00' />
-                <input placeholder='image url' onChange={(e) => this.handleImage(e.target.value)} />
+                :<input placeholder='     Product Name'onChange={(e) => this.handleName(e.target.value)} />}
+        
+              <input onChange={(e) => this.handlePrice(e.target.value)} placeholder='$0.00' />
+      
+                <input placeholder='image url' onChange={(e) => this.handleImage(e.target.value)} /> </div>
+    <br/><br/>
+                        <img className='url' src={this.state.image_url} />
+                        <br/>
                 <div className='add_inventory'>
-                 <button onClick={() => this.addInventory(this.state.name, this.state.price, this.state.image_url)}>
+                 <button className='add' onClick={() => this.addInventory(this.state.name, this.state.price, this.state.image_url)}>
                     + Add Inventory</button>
-                    <br />
-                    <br />
-                    <div className='create_image'>
-
-                        <img className='bin-image' src={this.state.image_url} />
 
                     </div>
+                   
 
-                </div>
+            </main>
             </div>
         )
     }

@@ -1,11 +1,16 @@
+div.bin-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    flex-direction: column;
+}
+div.create {
+    display: flex;
+    font-size: 20px;
 
+}
 
-.product {
-        width: 400px;
-    }
-
-  
-.shelf-title {
+a.shelf-title {
     position: fixed;
     color: white;
     height:108px;
@@ -15,12 +20,14 @@
    background-color: #E23519;
    font-weight: bold;
    font-size: 50px;
+   line-height: 2em;
+   text-align: left;
 
    
    
 }
 
-#img-logo {
+img.logo3 {
     position: fixed;
     left: 65px;
     top: 20px;
@@ -28,9 +35,22 @@
     height: 70px; 
 
 }
+.bin-title1 {
+    position: fixed;
+    font-weight: bold;
+    right: 0px;
+    width: 70vw;
+    height: 108px;
+    background-color: #FD5F4B;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: left;
+    text-indent: 10px;
+    line-height: 2em;
+    color: black;
+}
 
-
-.img-logo {
+a.link {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -42,62 +62,130 @@
     position: fixed;
     font-weight: bold;
     color: white;
+    right: 0px;
     width: 70vw;
     height: 108px;
-    right: 0px;
     background-color: #FD5F4B;
     font-weight: bold;
-   font-size: 50px;
-   text-align: left;
-   text-indent: 10px;
+    font-size: 50px;
+    text-align: left;
+    text-indent: 10px;
+    line-height: 2em;
+}
+
+div.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.container1 {
+    display: flex;
+    margin-top: 130px;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    font-size: 15px;
+}
+
+main.container-1 {
+    display: flex;
+    margin-top: 130px;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    font-size: 15px;
+
+}
+
+span{
+    text-align: left;
+}
+
+
+.title {
+    font-size: 50px;
+    text-align: center;
+
+}
+div.price {
+    font-size: 22px;
+    text-align: left;
+
+}
+
+img.url {
+    display: flex;
+    align-self: left;
+    max-width: 420px;
+    max-height: 400px;
+    min-width: 300px;
+    min-height: 400px;
 }
 
 
 
 input {
-    border-color: #B81000;
+    border-color: #FFBFB8;
     left: 400px;
     width: 400px;
-    height: 60px;
+    height: 70px;
     border-radius: 5px;
+    border-style: solid;
+    font-size: 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
-#save {
+
+input.product-name {
+    border-color: #B81000;
+    border-width: 4px;
+    border-style: solid;
+}
+button.save {
     background-color: rgb(61, 196, 144);
-    width: 200px;
-    height: 75px;
-    border-radius: 10px;
-}
-
-#edit {
-    width: 200px;
-    height: 75px;
-}
-.input {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 200px;
-    font-size: 16px;
-   
-}
-
-
-.button-container {
-    display: flex;
-    justify-content: center;
-
-    color: black;
+    width: 150px;
+    height: 60px;
+    border-radius: 40px;
+    font-size: 32px;
+    font-weight: bold;
     text-align: center;
+    margin-top: 10px;
+}
+
+button.edit, button.delete {
+    margin-top: 10px;
+    width: 150px;
+    height: 55px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #D7D7D7;
+    font-size: 32px;
+    font-weight: bold;
     
 }
-#delete {
 
-    background-color: rgb(228, 228, 228);
-    width: 200px;
-    height: 75px;
-    
-
+.add {
+    left: 400px;
+    width: 400px;
+    height: 70px;
+    border-radius: 25px;
+    background-color:rgb(61, 196, 144);
+    font-size: 40px;   
 }
+.edit {
+    margin-right: 50px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    color: black;
+    justify-content: space-between;
+    width: 400px;
+}
+
 
 
