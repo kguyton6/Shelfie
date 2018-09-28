@@ -2,17 +2,21 @@
 .create-header {
     display: flex;
     flex-direction: row;
+    font-family: sans-serif;
 }
+
 
 span.dollar-sign{
     position: absolute;
     background-color: transparent;
     font-size: 26px;
     font-weight: bold;
-    top: 48.5%;
+    top: 137px;
     text-indent: 5px;
 }
+
 div.create-inputs {
+    position: relative;
     display: flex;
     font-size: 20px;
     flex-direction: column;

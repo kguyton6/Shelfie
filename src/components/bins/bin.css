@@ -94,11 +94,11 @@ div.bin-inputs {
 }
 
 span.dollar {
-    position: fixed;
+    position: absolute;
     background-color: transparent;
     font-size: 26px;
     font-weight: bold;
-    top: 48.5%;
+    top: 101px;
 
 }
 
@@ -126,6 +126,7 @@ span.pic-title {
 .input-container{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 
