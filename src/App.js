@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
 import Home from './components/home/Home'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import Shelf from './components/shelfs/Shelf'
 import Bin from './components/bins/Bin'
 import Create_Bin from './components/create/Create_Bin'
+import './reset.css'
 
 
 

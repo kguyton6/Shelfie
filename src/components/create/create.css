@@ -9,7 +9,7 @@ span.dollar-sign{
     background-color: transparent;
     font-size: 26px;
     font-weight: bold;
-    top: 44%;
+    top: 48.5%;
     text-indent: 5px;
 }
 div.create-inputs {
@@ -84,4 +84,6 @@ img.url {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: sans-serif;
 }
+

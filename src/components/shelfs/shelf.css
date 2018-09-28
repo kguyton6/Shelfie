@@ -3,6 +3,7 @@
 div.shelf-container {
     display: flex;
     justify-content: center;
+    font-family: sans-serif;
 }
 
 div.shelf-header {

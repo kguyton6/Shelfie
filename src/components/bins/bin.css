@@ -1,7 +1,9 @@
-div.bin-container {
+
+.bin-container {
     display: flex;
     width: 100vw;
     flex-direction: column;
+    font-family: sans-serif;
 }
 
 .bin-header {
@@ -51,6 +53,7 @@ a.link {
 }
 .title {
     font-size: 50px;
+    
 }
 
 div.main-container {
@@ -69,6 +72,7 @@ div.container1 {
     width: 100vw;
     text-align: left;
     font-size: 15px;
+    margin-top: 50px;
 }
 
 div.container2{
@@ -90,11 +94,11 @@ div.bin-inputs {
 }
 
 span.dollar {
-    position: absolute;
+    position: fixed;
     background-color: transparent;
     font-size: 26px;
     font-weight: bold;
-    top: 47%;
+    top: 48.5%;
 
 }
 
@@ -114,7 +118,7 @@ div.dollar-container {
 
 span.pic-title {
     position: absolute;
-    top: 200px;
+    top: 150px;
     font-size: 40px;
     font-style: italic;
 }
@@ -139,13 +143,20 @@ div.price {
 }
 
 img.url {
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+
+img.url-disabled {
     max-width: 500px;
     max-height: 500px;
     min-width: 300px;
     min-height: 400px;
+    margin-top: 60px;
 }
-
-
 button.save {
     background-color: rgb(61, 196, 144);
     width: 150px;
